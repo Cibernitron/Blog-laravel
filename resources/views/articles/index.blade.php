@@ -23,7 +23,6 @@
 
         <div class="article-list">
             @foreach ($articles as $article)
-            <!-- <a href="{{ $article->page }}"> -->
             <div class="row mt-n5">
                 @if ($article->user->is(auth()->user()))
                 <x-dropdown>
@@ -73,7 +72,6 @@
                     </div>
                 </a>
             </div>
-            <!-- </a> -->
             @endforeach
         </div>
     </div>

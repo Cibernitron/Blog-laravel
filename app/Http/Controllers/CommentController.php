@@ -31,10 +31,8 @@ class CommentController extends Controller
 
     public function edit(Comment $comment)
     {
-        // Vérifiez si l'utilisateur est autorisé à modifier le commentaire
         $this->authorize('update', $comment);
 
-        // Affichez la vue de modification du commentaire avec les données du commentaire
         return view('comments.edit', compact('comment'));
     }
 }
